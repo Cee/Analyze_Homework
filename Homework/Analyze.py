@@ -144,6 +144,11 @@ def get_star(asin = _ASIN_):
     product_data = get_product_data(asin)
     star_list = [float(single_review['star'].split()[0]) \
                  for single_review in product_data['review']]
+    print len(product_data['review'])
+    count_list = [0, 0, 0, 0, 0]
+    for each in star_list:
+        count_list[(int)(each) - 1] += 1
+    print count_list
     plt.hist(star_list, color='red', align='mid', orientation='horizontal', bins=5)
     plt.show()
 
@@ -203,9 +208,9 @@ if __name__ == '__main__':
     # price_line()
     # price_spread()
 
-    draw_comments_num_graph(get_reviewNum(get_asin()), get_asin())
+    # draw_comments_num_graph(get_reviewNum(get_asin()), get_asin())
 
-    # get_star("B00547HWBE")
+    get_star("B00547HWBE")
 
     # special_date_review("B00547HWBE")
     # special_date_prize("B00547HWBE")

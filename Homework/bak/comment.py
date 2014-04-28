@@ -63,19 +63,20 @@ def draw_comments_num_graph(source_data, asia_data):
 
 
     print product_name_list
+    x_list = range(0, len(product_commentNum_list))
     print product_commentNum_list
 
-    # plt.plot(product_name_list,product_commentNum_list,'o-')
-    # plt.xlabel('Product')
-    # plt.ylabel('Number of comments')
-    #
-    # plt.xticks((1,20),product_name_list)
+    plt.plot(x_list,product_commentNum_list,'o-')
+    plt.xlabel('Product')
+    plt.ylabel('Number of comments')
 
-    # commentNum_list = [product_commentNum_list,product_name_list]
-    # plt.bar(left = (0,1),height = (100,0.5),width = 1,align="center")
+    plt.xticks((1,20),product_name_list)
 
-    # plt.hist(commentNum_list, color='grey', align='mid', bins=5, rwidth=0.5)
-    #
-    # plt.show()
+    commentNum_list = [product_commentNum_list,x_list]
+    plt.bar(left = (0,1),height = (100,0.5),width = 1,align="center")
+
+    plt.hist(commentNum_list, color=['grey','blue'], align='mid', bins=5, rwidth=0.5)
+
+    plt.show()
 
 draw_comments_num_graph(get_reviewNum(get_ASIN()), get_ASIN())
