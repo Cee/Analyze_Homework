@@ -196,11 +196,11 @@ def special_date_prize(asin = _ASIN_):
     print len(special_date_list)
     print len(pricelist)
 
-    plt.plot(special_date_list, pricelist, 'ro')
-    plt.gcf().autofmt_xdate()
-    plt.xlabel('Time')
-    plt.ylabel('Price')
-    plt.show()
+    # plt.plot(special_date_list, pricelist, 'ro')
+    # plt.gcf().autofmt_xdate()
+    # plt.xlabel('Time')
+    # plt.ylabel('Price')
+    # plt.show()
 
 
 '''MAIN'''
@@ -210,7 +210,12 @@ if __name__ == '__main__':
 
     # draw_comments_num_graph(get_reviewNum(get_asin()), get_asin())
 
-    get_star("B00547HWBE")
+    # price_line("B002VBWIP6")
+    # price_line("B0089KDCIU")
+    # price_line("B003ZMF27G")
+    # price_line("B0074FGNJ6")
+    price_line("B002VA464S")
+    price_line("B00F6NB8WU")
 
     # special_date_review("B00547HWBE")
     # special_date_prize("B00547HWBE")
