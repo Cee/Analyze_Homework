@@ -214,7 +214,7 @@ if __name__ == '__main__':
     # price_line("B0089KDCIU")
     # price_line("B003ZMF27G")
     # price_line("B0074FGNJ6")
-    price_line("B002VA464S")
+    # price_line("B002VA464S")
     price_line("B00F6NB8WU")
 
     # special_date_review("B00547HWBE")

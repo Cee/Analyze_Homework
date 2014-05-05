@@ -3,13 +3,11 @@ import json
 import string
 # import matplotlib.pyplot as plt
 
+from data_funcs import *
 _URL_ = "http://112.124.1.3:8004/api/commodity"
 
-def get_product_data(product_asin):
-    url = _URL_ + '/'
-    url += product_asin
-    jdata = json.loads(urllib.urlopen(url).read())
-    return jdata
+
+
 
 def get_star(asin):
     product_data = get_product_data(asin)
@@ -18,19 +16,21 @@ def get_star(asin):
     # plt.hist(star_list, color='red', align='mid', orientation='horizontal', bins=5)
     # plt.show()
 
+
 def get_ASIN(category_name):
     # category_name = 'Electronics'
     specify_asin = '&field=[\'ASIN\']'
     pages = 1
-    spe_url = _URL_+'?category_name='+category_name+specify_asin
+    spe_url = _URL_ + '?category_name=' + category_name + specify_asin
     data = json.loads(urllib.urlopen('/'.join([spe_url])).read())
-    whole_data=[]
-    while data!=[]:
+    whole_data = []
+    while data != []:
         whole_data += data
         pages += 1
-        spe_url = _URL_+'?category_name='+category_name+'&page='+str(pages)+specify_asin
+        spe_url = _URL_ + '?category_name=' + category_name + '&page=' + str(pages) + specify_asin
         data = json.loads(urllib.urlopen('/'.join([spe_url])).read())
     return whole_data
+
 
 def get_star_data(product_asins):
     zero_star = 0
@@ -42,7 +42,7 @@ def get_star_data(product_asins):
 
     for item_asin in product_asins:
         # print item_asin['ASIN']
-        product_data_info=get_product_data(item_asin['ASIN'])['stats_info']
+        product_data_info = get_product_data(item_asin['ASIN'])['stats_info']
         average_star = string.atof(product_data_info['avg_info'])
         if (int(average_star + 0.5)) < 1:
             zero_star += 1
@@ -57,7 +57,8 @@ def get_star_data(product_asins):
         else:
             five_star += 1
 
-    print zero_star,one_star,two_star,three_star,four_star,five_star
+    print zero_star, one_star, two_star, three_star, four_star, five_star
+
 
 print 'Baby Products'
 get_star_data(get_ASIN('Baby Products'))
