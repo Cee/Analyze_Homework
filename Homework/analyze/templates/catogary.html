@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Amazon Analysis Catogary Serach</title>
+
+        <!-- Loading Bootstrap -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Loading custom css -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/catogary.css">
+
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
+
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 head">
+                        <h1>Amazon Analysis</h1>
+                        <h3>Catogary Serach</h3>
+                </div>
+            </div>
+        </div>
+        <!-- search form -->
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline" role="form" action="/category" method="get">
+                    <div class="form-group">
+                        <label class="sr-only" for="main catogray">Main Catogray</label>
+                        <select class="form-control input-lg main-catogary" name="cate_one">
+                            <option value="Please Select a Catogary">Please Select a Catogary</option>
+                            <option value="Baby Product">Baby Product</option>
+                            <option value="Beauty">Beauty</option>
+                            <option value="Cell Phones & Accessories">Cell Phones &amp; Accessories</option>
+                            <option value="Clothing & Accessories">Clothing &amp; Accessories</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Health & Personal Care">Health &amp; Personal Care</option>
+                            <option value="Home & Kitchen">Home &amp; Kitchen</option>
+                            <option value="Jewelry">Jewelry</option>
+                            <option value="Office Products">Office Products</option>
+                            <option value="Patio, Lawn & Garden">Patio, Lawn &amp; Garden</option>
+                            <option value="Pet Supplies">Pet Supplies</option>
+                            <option value="Shoes">Shoes</option>
+                            <option value="Sports &amp; Outdoors">Sports &amp; Outdoors</option>
+                            <option value="Tools & Home Improvement">Tools &amp; Home Improvement</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="secondary-catogary">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <label class="sr-only" for="secondary catogray">Secondary Catogary</label>
+                        <select class="form-control input-lg secondary-catogary" name="cate_two">
+                        </select>
+                    </div>
+                    <div class="form-group" id="tertiary-catogray">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <label class="sr-only" for="secondary catogray">Tertiary Catogary</label>
+                        <select class="form-control input-lg tertiary-catogray" name="cate_three">
+                        </select>
+                    </div>
+                    <span></span>
+                    <button type="submit" class="btn btn-inverse btn-lg">Let's Find Out</button>
+                </form>
+            </div>
+        </div>
+        <!-- javascript -->
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+        <script src="js/bootstrap-switch.js"></script>
+        <script src="js/flatui-checkbox.js"></script>
+        <script src="js/flatui-radio.js"></script>
+        <script src="js/jquery.tagsinput.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <script src="js/catogary.js"></script>
+    </body>
+    
+</html>

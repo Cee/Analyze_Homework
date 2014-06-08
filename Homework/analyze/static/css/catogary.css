@@ -1,0 +1,17 @@
+select.input-lg {
+    line-height: 20px;
+}
+
+.head {
+    margin-top: 0px;
+    z-index: 1;
+    height: auto;
+}
+
+#secondary-catogary {
+    display: none;
+}
+
+#tertiary-catogray {
+    display: none;
+}
